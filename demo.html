@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>customRadioCheck</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <link rel="stylesheet" href="customRadioCheck.css">
+  <style type="text/css">
+    body { margin: 50px; font: 14px Arial; }
+  </style>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script src="customRadioCheck.js"></script>
+</head>
+<body>
+  <div>
+    <h3>Checks:</h3>
+    <label><input type="checkbox"/>Gorilla</label>
+    <label><input type="checkbox"/>Lamb</label>
+    <label><input type="checkbox"/>Tiger</label>
+  </div>
+  <div>
+    <h3>Radios:</h3>
+    <label><input type="radio" name="n"/>Green</label>
+    <label><input type="radio" name="n"/>Blue</label>
+    <label><input type="radio" name="n"/>Orange</label>
+  </div>
+  <script>
+    $('input[type=checkbox], input[type=radio]').customRadioCheck();
+  </script>
+</body>
+</html>
+
