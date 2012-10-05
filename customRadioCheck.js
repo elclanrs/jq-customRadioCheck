@@ -6,7 +6,7 @@
  */
 ;(function(){
 $.fn.customRadioCheck = function() {
-  
+
   return this.each(function() {
 
     var $this = $(this);
@@ -18,7 +18,7 @@ $.fn.customRadioCheck = function() {
 
     $this.parent('label').addClass('custom-label').attr('onclick', ''); // Fix clicking label in iOS
     $this.css({ position: 'absolute', left: '-9999px' }); // hide by shifting left
-    
+
     // Events
     $this.on({
       change: function() {
@@ -26,7 +26,7 @@ $.fn.customRadioCheck = function() {
         if ($this.is(':radio')) {
           $this.parent().siblings('label').find('.custom-radio').removeClass('checked');
         }
-        $span.toggleClass('checked');
+        $span.toggleClass('checked', $(this).is(':checked'));
       },
       focus: function() { $span.addClass('focus'); },
       blur: function() { $span.removeClass('focus'); },

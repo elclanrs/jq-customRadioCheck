@@ -16,14 +16,14 @@
     position: relative;
     top: -.15em; /* Adjust to for best fit */
     margin: 0 .4em;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background: url(customRadioCheck.png) 0 0 no-repeat;
 }
-.custom-radio { background-position: 0 -24px; }
-.custom-check.focus { background-position: -24px 0; }
-.custom-radio.focus { background-position: -24px -24px; }
-.custom-check.checked { background-position: -48px 0; }
-.custom-radio.checked { background-position: -48px -24px; }
-.custom-check.checked.focus { background-position: -72px 0; }
-.custom-radio.checked.focus { background-position: -72px -24px; }
+.custom-radio { background-position: 0 -20px; }
+.custom-check.focus { background-position: -20px 0; }
+.custom-radio.focus { background-position: -20px -20px; }
+.custom-check.checked { background-position: -40px 0; }
+.custom-radio.checked { background-position: -40px -20px; }
+.custom-check.checked.focus { background-position: -60px 0; }
+.custom-radio.checked.focus { background-position: -60px -20px; }
