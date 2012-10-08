@@ -1,9 +1,9 @@
 /*
- * customRadioCheck: jQuery plguin for checkbox and radio replacement
- * Usage: $('input[type=checkbox], input[type=radio]').customRadioCheck();
- * Author: Cedric Ruiz
- * License: MIT
- */
+* customRadioCheck: jQuery plguin for checkbox and radio replacement
+* Usage: $('input[type=checkbox], input[type=radio]').customRadioCheck();
+* Author: Cedric Ruiz
+* License: MIT
+*/
 ;(function(){
 $.fn.customRadioCheck = function() {
 
@@ -31,8 +31,7 @@ $.fn.customRadioCheck = function() {
         $span.toggleClass('checked', $this.is(':checked'));
       },
       focus: function() { $span.addClass('focus'); },
-      blur: function() { $span.removeClass('focus'); },
-      click: function() { $this.trigger('focus'); }
+      blur: function() { $span.removeClass('focus'); }
     });
   });
 };
