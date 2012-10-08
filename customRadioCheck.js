@@ -16,22 +16,25 @@ $.fn.customRadioCheck = function() {
     $this.is(':checked') && $span.addClass('checked'); // init
     $span.insertAfter($this);
 
-    $this.parent('label').addClass('custom-label').attr('onclick', ''); // Fix clicking label in iOS
-    $this.css({ position: 'absolute', left: '-9999px' }); // hide by shifting left
+    $this.parent('label').addClass('custom-label')
+      .attr('onclick', ''); // Fix clicking label in iOS
+    // hide by shifting left
+    $this.css({ position: 'absolute', left: '-9999px' });
 
     // Events
     $this.on({
       change: function() {
-        var $this = $(this);
         if ($this.is(':radio')) {
-          $this.parent().siblings('label').find('.custom-radio').removeClass('checked');
+          $this.parent().siblings('label')
+            .find('.custom-radio').removeClass('checked');
         }
-        $span.toggleClass('checked', $(this).is(':checked'));
+        $span.toggleClass('checked', $this.is(':checked'));
       },
       focus: function() { $span.addClass('focus'); },
       blur: function() { $span.removeClass('focus'); },
-      click: function() { $(this).trigger('focus'); }
+      click: function() { $this.trigger('focus'); }
     });
   });
 };
 }());
+
